@@ -13,8 +13,8 @@ function Search() {
   };
 
   return (
-    <FormStyle onSubmit={submitHandler}>
-      <div>
+    <FormStyle onSubmit={submitHandler} className="app__search">
+      <div className="app__search-wrapper">
         <FaSearch />
         <input
           onChange={(e) => setInput(e.target.value)}
@@ -27,8 +27,6 @@ function Search() {
 }
 
 const FormStyle = styled.form`
-  margin: 0rem 20rem;
-
   div {
     position: relative;
     width: 100%;

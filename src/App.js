@@ -8,9 +8,9 @@ import { GiKnifeFork } from "react-icons/gi";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App app">
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <Nav>
+        <Nav className="app__nav">
           <GiKnifeFork />
           <Logo to={"/"}>food n stuff</Logo>
         </Nav>

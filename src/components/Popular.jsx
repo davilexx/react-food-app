@@ -38,6 +38,15 @@ function Popular() {
             pagination: false,
             drag: "free",
             gap: "2rem",
+
+            breakpoints: {
+              768: {
+                perPage: 2,
+              },
+              556: {
+                perPage: 1,
+              },
+            },
           }}
         >
           {popular.map((recipe) => {
