@@ -1,7 +1,7 @@
 {
   "name": "react-project",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://davilexx.github.io/react-food-app",
   "dependencies": {
     "-": "^0.0.1",
