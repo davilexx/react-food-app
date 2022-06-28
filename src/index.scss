@@ -66,4 +66,18 @@ code {
       font-weight: 400;
     }
   }
+
+  &__buttons {
+    @media screen and (max-width: 425px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    button {
+      margin: 0;
+      width: 45%;
+    }
+  }
 }
