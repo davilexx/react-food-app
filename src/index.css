@@ -33,4 +33,46 @@ code {
 .title {
   margin: 0 0 0.8rem 0.5rem;
 }
+
+@media screen and (max-width: 1024px) {
+  .recipe {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.recipe__main {
+  width: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+  .recipe__main {
+    width: 100%;
+  }
+}
+
+.recipe__img {
+  width: 100%;
+}
+
+.recipe__info {
+  width: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+  .recipe__info {
+    width: 100%;
+    padding: 0 !important;
+    margin-top: 3rem;
+  }
+}
+
+.recipe__info h3 {
+  margin-top: 1rem;
+  font-weight: 400;
+}
 /*# sourceMappingURL=index.css.map */

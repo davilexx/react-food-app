@@ -8,25 +8,24 @@ function Recipe() {
   const [details, setDetails] = useState({});
   const [activeTab, setActiveTab] = useState("instructions");
 
-  const fetchDetails = async () => {
-    const data = await fetch(
-      `https://api.spoonacular.com/recipes/${params.name}/information?apiKey=${process.env.REACT_APP_API_KEY}`
-    );
-    const detailData = await data.json();
-    setDetails(detailData);
-  };
-
   useEffect(() => {
+    const fetchDetails = async () => {
+      const data = await fetch(
+        `https://api.spoonacular.com/recipes/${params.name}/information?apiKey=${process.env.REACT_APP_API_KEY}`
+      );
+      const detailData = await data.json();
+      setDetails(detailData);
+    };
     fetchDetails();
   }, [params.name]);
 
   return (
-    <DetailWrapper>
-      <div>
-        <h2>{details.title}</h2>
-        <img src={details.image} alt={details.title} />
+    <DetailWrapper className="recipe">
+      <div className="recipe__main">
+        <h2 className="recipe__title">{details.title}</h2>
+        <img className="recipe__img" src={details.image} alt={details.title} />
       </div>
-      <Info>
+      <Info className="recipe__info">
         <Button
           className={activeTab === "instructions" ? "active" : ""}
           onClick={() => setActiveTab("instructions")}
@@ -64,6 +63,7 @@ const DetailWrapper = styled.div`
   margin-top: 2.5rem;
   margin-bottom: 5rem;
   display: flex;
+  justify-content: space-between;
 
   .active {
     background: linear-gradient(35deg, #494949, #313131);
@@ -95,7 +95,7 @@ const Button = styled.button`
 `;
 
 const Info = styled.div`
-  margin-left: 10rem;
+  padding: 0 0 0 2rem;
 `;
 
 export default Recipe;
