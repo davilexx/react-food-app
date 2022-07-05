@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Nav className="app__nav">
           <GiKnifeFork />
-          <Logo to={"/"}>food n stuff</Logo>
+          <Logo to={"/"}>food</Logo>
         </Nav>
         <Search />
         <Category />
